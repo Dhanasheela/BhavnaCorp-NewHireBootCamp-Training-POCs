@@ -1,0 +1,72 @@
+<html>
+  <head>
+    Javascript function example
+  </head>
+  <body>
+    <button onclick="getUsers(item)">GET</button>
+    <button onclick="AddProducts()">Post</button>
+    <!-- <button onclick="flterUser()">fILTER</button> -->
+    <p id="demo"></p>
+    <p id="post"></p>
+    username:
+    <p id="username"></p>
+    Await:
+    <p id="await"></p>
+    <script>
+      let text = "";
+      const products = ["shirt", "pants"];
+      //   var product = products.concat("fridge");
+      var users = [
+        { name: "dhanu", product: "shirt", price: 200 },
+        { name: "raki", product: "pant", price: 150 },
+      ];
+      var name = "dhanu";
+      var product = "shirt";
+      // adding values
+      var product = users.push({
+        name: "uma",
+        product: "fridge",
+        price: 50,
+      });
+
+      function AddProducts() {
+        document.getElementById("post").innerHTML = product;
+      }
+      //   get values using mapping
+      var alluser = users.map(getUsers);
+
+      function getUsers(item) {
+        return (
+          "name: " +
+          [item.name] +
+          "&nbsp&nbsp " +
+          "product: " +
+          [item.product] +
+          "<br>"
+        );
+      }
+      document.getElementById("demo").innerHTML = alluser;
+
+      //   filter
+      var flterUser1 = users.filter((flterUser) => flterUser.name == "dhanu");
+
+      document.getElementById("username").innerHTML = flterUser1[0].name;
+
+      // anonymous function with find
+      var getData = function (item) {
+        var found = users.find((item) => item.price == 150);
+        console.log("name ", found);
+      };
+      getData();
+
+      // async and await
+      async function myData() {
+        let mypromise = new Promise(function (myResolve, myReject) {
+          myResolve("users");
+        });
+        document.getElementById("await").innerHTML = await mypromise;
+      }
+      myData();
+    </script>
+  </body>
+</html>
