@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>BHAVANA</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+  li     {
+              
+               margin-top:70px;
+               margin-left:30px;
+               font-size: 18px;
+               font-family: sans-serif;
+               font-weight: bold;
+            }
+ li a, .dropbtn 
+ {
+   display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+ color: green;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+ color: green ;
+  min-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.mySlides {
+  display:none;
+width: 100%;
+max-height: 400px;
+}
+.dropbtn a  {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+ .dropbtn a:hover { 
+  width: 100%; 
+  left: 0; 
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+a:hover{
+font-style: green;
+}
+.button
+{
+  width:150px ;
+  height: 40px;
+  border-radius: 20px;
+  border-color:  #ffffff;
+  color: white; 
+  font-weight: bold;
+  background-color: darkblue;
+
+}
+.button1:hover{
+  background-color:green;
+}
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md bg-light navbar-light ">
+    <img  class="navbar-brand" src="logo.png" height="70px"  alt="logo"/>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav " style="float:right;">
+        <li class="nav-item   dropdown">
+          <a href="javascript:void(0)" class="dropbtn nav-link">Solutions</a>
+          <div class="dropdown-content">
+            <a href="#">Software Development</a>
+            <a href="#">Application Integration with SQA</a>
+            <a href="#">Consulting</a>
+            <a href="#">Data Analytics</a>
+            <a href="#">DevOps</a>
+            <a href="#">Quality Assurance</a>
+            <a href="#">Development Ceter</a>
+            <a href="#">Mobile Development</a>
+           
+          </div>
+        </li>
+        <li class="nav-item   dropdown ">
+          <a href="javascript:void(0)" class="dropbtn nav-link">Industries</a>
+          <div class="dropdown-content">
+            <a href="#">Digital Communication</a>
+            <a href="#">Energy & Utilities</a>
+            <a href="#">Finance</a>
+            <a href="#">Retail</a>
+            <a href="#">Software & Technology</a>
+            <a href="#">Healthcare</a>
+            </div>
+        </li>
+        <li class="nav-item  dropdown"><a href="javascript:void(0)" class="nav-link   dropbtn">About Bhavna</a>
+          <div class="dropdown-content">
+            <a href="#">Corporate Profile</a>
+            <a href="#">Leadership Team</a>
+            <a href="#">Why Bhavna Corp</a>
+          </div></li>
+        <li class="nav-item  dropdown">
+          <a class="nav-link dropbtn" href="#">Careers</a>
+        </li>         
+        <li class="nav-item dropdown">
+           <a class="nav-link dropbtn"   href="#">Contact Us</a></li> 
+      </ul>
+    </div>  
+  </nav>
+  <div >
+    <img class="mySlides" src="10.jpg" width="928px" height="50%" >
+    <img class="mySlides" src="11.jpg" width="928px" height="50%">
+    <img class="mySlides" src="13.jpg"  width="928px" height="50%">
+</div>
+<script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script> 
+
+<div class="row">
+  <div class="col"><h2 style=" text-align: center;">
+    <b style="color: darkblue ;">"Think Locally - Work Globally"</b>
+  </h2>
+   <b> <hr style=" height:1px;border-width:0;width:200px;color:black;background-color:black"></b>  
+  </div>
+</div><br>
+<div class="container">
+<div class="row">
+<div class="col-sm-3">
+<img src="quality.jpg" alt="logo" width="400px" >
+<div class="overlay " width=100%>
+  <h3> MISSION</h3><hr style=" height:1px;border-width:0;width:100px;color:white;background-color:white">
+ <p style="font-size: 10px;">We are dedicated to creating differentiators for our clients' 
+  businesses through innovative use of talent
+   that help bring best products to market in less time and at reduced cost.
+   </p>
+  </div>
+</div>&nbsp;&nbsp;
+<div class="col-sm-3"></div>
+<div class="col-sm-3">
+  <img src="13.jpg" alt="logo" width="400px" >
+   <div class="overlay" width=100%>
+    <h3>  VISION</h3><hr style=" height:1px;border-width:0;width:100px;color:white;background-color:white">
+   <p style="font-size: 10px;">To become THE trusted partner of our clients
+     through a world-class team of developers, technologists, and QA personnel
+     where people can define the company and are our most important asset.
+     </p>
+  </div>
+  </div>
+</div>
+</div>
+<br><br>
+
+<div class="row">
+  <div class="col"><h2 style=" text-align: center;">
+    <b style="color: darkblue ;">"Solutions We Provide"</b>
+  </h2>
+   <b> <hr style=" height:1px;border-width:0;width:200px;color:black;background-color:black"></b>  
+  </div>
+</div>
+<div class="container-fluid "style="background-color:darkblue ; height:200px">
+<br><br><center><h1 style="color:white;"><b>Join Our Team</b> </h1><br>
+ <a href="registration.html"><button class="button button1" >Apply Now</button></a>
+
+</center>
+</div>
+<!-- <DIV class="col-lg-2 col-md-12 mb-4 mb-md-0"></DIV>
+<div class="col-lg-2 col-md-12 mb-4 mb-md-0 ">
+  <img src="13.jpg" alt="logo" width="400px" >
+  
+  <div class="overlay" width=100%>
+    <h3>  VISION</h3><hr style=" height:1px;border-width:0;width:100px;color:white;background-color:white">
+   <p style="font-size: 10px;">To become THE trusted partner of our clients
+     through a world-class team of developers, technologists, and QA personnel
+     where people can define the company and are our most important asset.
+     </p>
+  </div>
+  </div> -->
+  
+</div>
+<br><br> <!--</footer> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h4><b>USA</b></h4>
+<h5>Bhavna Corp.</h5>
+<p style="font-size: 14px;">3051, Copper Peak Drive, Dublin,<br>
+  CA - 94568</p>
+ <br>
+ <h4><b>INDIA</b></h4>
+<h5>Noida</h5>
+<h5>Bhavna Software India Pvt. Ltd.</h5>
+<p style="font-size: 14px;">10th Flr., Wing C, Logix Cyber Park, C 28-29, Sec.- 62,<br>
+  Noida, Uttar Pradesh – 201301</p>
+  <br>
+  <h5><b>Hyderabad</b></h5>
+
+  <h5>Bhavna Software India Pvt. Ltd.</h5>
+  <p style="font-size: 14px;">212, 2nd Flr., Cyber Crown, Sec. - 2, HUDA Techno Enclave,<br>
+    Hitech City, Hyderabad, Telangana - 500081</p>
+      </div>
+      
+      <div class="col-sm-2">
+            <h4><b>ABOUT US</b></h4>
+          <a  class="a" style="color:black; transition: width 0.3s ease 0s, left 0.3s ease 0s; " href="#">Corporate Profile</a><br>
+          <a   class="a" style="color:black;" href="#"> Leadership Team</a><br>
+           <a   class="a"  style="color:black;" href="#"> Why Bhavna Corp</a><br><br>
+           <H4><b>Careers</b></H4>
+        </div>
+      <div class="col-sm-3  ">
+        <h4><b>Solutions</b></h4>  
+        <a  style="color:black;" href="#"><b>Software Development</b</a><br>
+      <a   class="a" style="color:black;" href="#">Application Integration with SQA</a><br>
+      <a  class="a" style="color:black;"href="#">Consulting</a><br>
+      <a  class="a" style="color:black;" href="#">Data Analytics</a><br>
+      <a style="color:black;" href="#">DevOps</a><br>
+      <a style="color:black;" href="#">Quality Assurance</a><br>
+      <a style="color:black;"href="#">Development Ceter</a><br>
+      <a style="color:black;" href="#">Mobile Development</a>
+      </div>
+         <div class="col">
+      <h4><b>Contact us</b></h4>
+      <h4><b>Privacy Policy</b></h4>
+      <h4><b>sitemap</b></h4>
+      </div>
+          </div>
+  </div>
+</div>
+
+</body>
+</html>

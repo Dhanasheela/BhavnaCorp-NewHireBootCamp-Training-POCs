@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device=width, initial-scale=1">
+        <title>Sign in</title>
+        <style>
+              body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:lightskyblue;
+    }
+       .container
+    {
+        padding: 40px;
+        background-color:lightslategrey  ;
+        border-radius: 6px;
+    color: lightyellow ;
+    }
+    .tr{
+        border-collapse:separate;
+                border-spacing:0 14px;
+    }
+ .submit 
+ {
+     background-color: #04AA6D;
+     color: white;
+     padding: 16PX 20px;
+     margin: 8px 0;
+     border:none;
+     cursor:pointer;
+     width:40%;
+     opacity: 0.9;
+  margin-left: 30%;
+  border-radius: 6px;
+  font-style: bold;
+ }
+        </style>
+        <script>
+            function validateform()
+    {
+        var username=document.forms["myform"]["username"].value;
+        var password=document.forms["myform"]["password"].value;
+        if(username==null||username=="" &&password==null ||password=="")
+        {
+            alert("username & password is required");
+            return false;
+
+        }
+
+    }
+        </script>
+    </head>
+    
+    <body>
+      <marquee> <h1 style="color:darkred">Welcome to Login Page</h1></marquee> 
+        <center>
+            <div class="container" style=" Width: 30%"; > 
+    
+        <form method="POST" name="myform" onsubmit="return validateform()">
+            <table class="tr">
+                <tr>
+                    <td>UserName :</label></td>
+                    <td style="height: 40px;"><input type="text" id="username" name="username" placeholder="enter your name" style="border-radius: 6px" ></td>
+                </tr>
+                <tr>
+                    <td>Password :</label></td>
+                    <td><input type="password" id="password" name="password"  style="border-radius: 6px"></td>
+                </tr>
+                <tr >  <td colspan="2">  <input type="submit" value="submit" class="submit" ></td> </tr>
+     <tr><td colspan="2"><p >New User ?<a href="registration.html">Register</a></p></td></tr>
+            </table>
+        </form>
+        </div>
+    </center>
+    </body>
+</html>
