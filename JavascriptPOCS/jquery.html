@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /*     */
+      .blink {
+        color: green;
+        font-weight: bold;
+      }
+      img {
+        position: relative; /* Required to move element */
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#accordion").accordion();
+        //addContent
+        $("#addContent-btn").click(function () {
+          var newHeading = "<h2>Important Note:</h2>";
+          var newPara = document.createElement("p");
+          newPara.innerHTML = "<em>Nature is Beautiful...</em>";
+          var newImg = $('<img src="images/smiley.png" alt="Symbol">');
+          $("#content").after(newHeading, newPara, newImg);
+        });
+
+        //start animation
+        $(".start-btn").click(function () {
+          $("img").animate({ left: "+=150px" }, 2000);
+        });
+
+        // Stop running animation
+        $(".stop-btn").click(function () {
+          $("img").stop();
+        });
+
+        // Start animation in the opposite direction
+        $(".back-btn").click(function () {
+          $("img").animate({ left: "-=150px" }, 2000);
+        });
+
+        // Reset to default
+        $(".reset-btn").click(function () {
+          $("img").animate({ left: "0" }, "fast");
+        });
+
+        //remove attribute
+        $("#rmv-btn").click(function () {
+          $("a").removeAttr("href");
+        });
+        //change color of text
+        $("#clrbtn").click(function () {
+          $("#clr").css("color", "red");
+        });
+
+        //blink
+        $("#para").css("color", "black").css("font-size", "30px");
+        $(".blink").css("blink").hide();
+        $("#para").css("color", "blue");
+      });
+      function blink_text() {
+        $(".blink").fadeOut(2000);
+        $(".blink").fadeIn(2000);
+      }
+      setInterval(blink_text, 1000);
+    </script>
+  </head>
+  <body>
+    <button id="clrbtn">click me</button>
+    <p id="clr" style="color: greenyellow">
+      If you click on me button, I will change color.
+    </p>
+    <h1>
+      <p id="para">welcome!!<span class="blink"> To BhavnaCorp..</span></p>
+    </h1>
+    <hr />
+    <h2>Animation</h2>
+    <button class="start-btn">Start</button>
+    <button type="button" class="stop-btn">Stop</button>
+    <button type="button" class="back-btn">Back</button>
+    <button type="button" class="reset-btn">Reset</button>
+    <p>
+      <img src="images/duck2.png" alt="Duck" />
+    </p>
+    <hr />
+    <div style="background-color: lavender">
+      <h2>Remove Attribute</h2>
+      <a href="#">Home</a>
+      <a href="#">About</a><br />
+      <button id="rmv-btn">Remove attribute</button>
+    </div>
+    <hr />
+    <div>
+      <button id="addContent-btn">Insert content</button>
+      <p id="content">
+        Nature is an important and integral part of mankind. It is one of the
+        greatest blessings for human life; however, now-a-days humans fail to
+        recognize it as one.
+      </p>
+    </div>
+    <hr />
+    <div id="accordion">
+      <h3>What is JQuery?</h3>
+      <div>
+        <p>
+          jQuery is a fast, small, and feature-rich JavaScript library. It makes
+          things like HTML document traversal and manipulation, event handling,
+          animation...
+        </p>
+      </div>
+
+      <h3>Where is it used?</h3>
+      <div>
+        <p>
+          JQuery can be used to develop Ajax based applications. It can be used
+          to make code simple, concise and reusable..
+        </p>
+      </div>
+      <h3>Why JQuery?</h3>
+      <div>
+        <ul>
+          <li>
+            jQuery is a lightweight, "write less, do more", JavaScript library.
+          </li>
+          <li>
+            The purpose of jQuery is to make it much easier to use JavaScript on
+            your website
+          </li>
+          <li>
+            jQuery takes a lot of common tasks that require many lines of
+            JavaScript code to accomplish
+          </li>
+          <li>Interaction with Industry Experts</li>
+          <li>Small Batches to focus on each student</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
