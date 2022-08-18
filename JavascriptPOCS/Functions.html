@@ -67,6 +67,51 @@
         document.getElementById("await").innerHTML = await mypromise;
       }
       myData();
+
+      const fruitBasket = {
+        apple: 27,
+        grape: 0,
+        pear: 14,
+      };
+      const getNumFruit = (fruit) => {
+        return fruitBasket[fruit];
+      };
+      const numApples = getNumFruit("apple");
+      console.log("no.of apples", numApples);
+      const sleep = (ms) => {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      };
+
+      const getNumFruit1 = (fruit) => {
+        return sleep(1000).then((v) => fruitBasket[fruit]);
+      };
+
+      getNumFruit1("apple").then((num) => console.log("num", num)); // 27
+      const control = async (_) => {
+        console.log("Start");
+
+        const numApples = await getNumFruit("apple");
+        console.log("apples", numApples);
+
+        const numGrapes = await getNumFruit("grape");
+        console.log("grapes", numGrapes);
+
+        const numPears = await getNumFruit("pear");
+        console.log("pears", numPears);
+
+        console.log("End");
+      };
+
+      //spread operator
+      function sum(...input) {
+        let sum = 0;
+        for (let i of input) {
+          sum = sum + i;
+        }
+        return sum;
+      }
+      console.log("sum", sum(2, 3));
+      console.log("sum", sum(2, 3, 4));
     </script>
   </body>
 </html>
