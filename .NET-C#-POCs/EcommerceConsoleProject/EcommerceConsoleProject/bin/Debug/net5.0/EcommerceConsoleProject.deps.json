@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "EcommerceConsoleProject/1.0.0": {
+        "dependencies": {
+          "CustomerProject": "1.0.0",
+          "OrderProject": "1.0.0",
+          "ProductProject": "1.0.0"
+        },
+        "runtime": {
+          "EcommerceConsoleProject.dll": {}
+        }
+      },
+      "CustomerProject/1.0.0": {
+        "runtime": {
+          "CustomerProject.dll": {}
+        }
+      },
+      "OrderProject/1.0.0": {
+        "dependencies": {
+          "ProductProject": "1.0.0"
+        },
+        "runtime": {
+          "OrderProject.dll": {}
+        }
+      },
+      "ProductProject/1.0.0": {
+        "dependencies": {
+          "CustomerProject": "1.0.0"
+        },
+        "runtime": {
+          "ProductProject.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EcommerceConsoleProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CustomerProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OrderProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProductProject/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

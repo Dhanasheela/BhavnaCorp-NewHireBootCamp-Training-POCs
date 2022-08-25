@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <select (change)="setDropDownValue($event)">
+    <option value="">--select--</option>
+    <option value="In">India</option>
+    <option value="UK">United Kingdom</option>
+    <option value="AUS">Australia</option>
+    <option value="SL">Srilanka</option>
+    <option value="USA">United State</option>
+  </select>
+
+  <h2>You have Selected</h2>
+
+  <div [ngSwitch]="dropDownValue">
+    <h3 *ngSwitchCase="'In'">India</h3>
+    <h3 *ngSwitchCase="'UK'">United Kingdom</h3>
+    <h3 *ngSwitchCase="'AUS'">Australia</h3>
+    <h3 *ngSwitchCase="'SL'">Srilanka</h3>
+    <h3 *ngSwitchCase="'USA'">United State</h3>
+    <h3 *ngSwitchDefault="">You have not selected any country</h3>
+  </div>
+</div>
