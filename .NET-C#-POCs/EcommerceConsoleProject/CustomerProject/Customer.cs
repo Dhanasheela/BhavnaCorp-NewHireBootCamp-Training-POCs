@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomerProject
 {
-    public class Customer
+    public class Customer: ICustomer
     {
         List<CustomerDetails> customer = new List<CustomerDetails>();
         public  List<CustomerDetails> AddCustomer()
