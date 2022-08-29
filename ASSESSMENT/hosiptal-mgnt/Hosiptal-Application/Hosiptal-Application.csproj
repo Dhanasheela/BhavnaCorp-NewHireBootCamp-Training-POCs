@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Hosiptal_Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DoctorsProject\DoctorsProject.csproj" />
+    <ProjectReference Include="..\PatientProject\PatientProject.csproj" />
+    <ProjectReference Include="..\RoomProject\RoomProject.csproj" />
+  </ItemGroup>
+
+</Project>

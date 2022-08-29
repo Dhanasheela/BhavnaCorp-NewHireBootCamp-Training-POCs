@@ -1,0 +1,12 @@
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\bin\Debug\net5.0\PatientProject.deps.json
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\bin\Debug\net5.0\PatientProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\bin\Debug\net5.0\ref\PatientProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\bin\Debug\net5.0\PatientProject.pdb
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.csproj.AssemblyReference.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.AssemblyInfoInputs.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.AssemblyInfo.cs
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.csproj.CoreCompileInputs.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\ref\PatientProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\PatientProject\obj\Debug\net5.0\PatientProject.pdb

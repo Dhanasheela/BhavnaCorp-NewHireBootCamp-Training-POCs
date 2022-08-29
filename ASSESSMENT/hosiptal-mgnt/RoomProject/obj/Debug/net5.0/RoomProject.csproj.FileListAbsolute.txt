@@ -1,0 +1,12 @@
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\bin\Debug\net5.0\RoomProject.deps.json
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\bin\Debug\net5.0\RoomProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\bin\Debug\net5.0\ref\RoomProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\bin\Debug\net5.0\RoomProject.pdb
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.csproj.AssemblyReference.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.AssemblyInfoInputs.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.AssemblyInfo.cs
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.csproj.CoreCompileInputs.cache
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\ref\RoomProject.dll
+D:\BhavnaCorp-NewHireBootCamp-Training-POCs\.NET-C#-POCs\Hosiptal-Application\RoomProject\obj\Debug\net5.0\RoomProject.pdb
