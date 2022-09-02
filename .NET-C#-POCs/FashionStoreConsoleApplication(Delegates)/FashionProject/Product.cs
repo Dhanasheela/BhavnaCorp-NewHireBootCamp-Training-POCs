@@ -20,8 +20,10 @@ namespace FashionProject
             Console.WriteLine("Enter following information to add new product:");
             Console.WriteLine("Enter product name");
             products.pname = Console.ReadLine();
+
             Console.WriteLine("Enter product price");
             products.price = int.Parse(Console.ReadLine());
+
             Console.WriteLine("Enter category id");
             products.cid = int.Parse(Console.ReadLine());
 
@@ -37,8 +39,6 @@ namespace FashionProject
         }
         public void AllProducts(string role)
         {
-            // role =Console.ReadLine();
-
             if (role == "product")
             {
                 Console.WriteLine("Enter ur choice");
@@ -46,20 +46,20 @@ namespace FashionProject
                 Console.WriteLine("2:Delete product");
                 Console.WriteLine("3:Display product");
                 Console.WriteLine("4:Update product");
-                Console.WriteLine("5:Search product with category name");
+                Console.WriteLine("5:Search product with product name");
                 Console.WriteLine("6:exit");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("Enter following information to add new Category:");
+                        Console.WriteLine("Enter following information to add new Products:");
 
                         //function delegates
                         Func<ProductDetails, string> productfunc= new Func<ProductDetails,string>(AddProduct);
                         productfunc(productDetails);
                         break;
                     case 2:
-                        Console.WriteLine("Enter categoryId which you want to delete:");
+                        Console.WriteLine("Enter productId which you want to delete:");
                         int cid = int.Parse(Console.ReadLine());
 
                         //Action delegates
@@ -70,7 +70,7 @@ namespace FashionProject
                         DisplayList();
                         break;
                     case 4:
-                        Console.WriteLine("Enter categoryId which you want to Update:");
+                        Console.WriteLine("Enter productId which you want to Update:");
                         int id = int.Parse(Console.ReadLine());
                         UpdateProduct(id);
                         break;
@@ -98,7 +98,7 @@ namespace FashionProject
             sqlCommand = new SqlCommand("delete from product where pid=" + pid + "", con);
             con.Open();
             sqlCommand.ExecuteNonQuery();
-            Console.WriteLine("category with id:" + pid + "\n" + "Deleted successfully");
+            Console.WriteLine("product with id:" + pid + "\n" + "Deleted successfully");
             con.Open();
             
         }
@@ -125,14 +125,20 @@ namespace FashionProject
                 Console.WriteLine("Enter following information to update new product:");
                 Console.WriteLine("Enter product name");
                 productDetails.pname = Console.ReadLine();
+
                 Console.WriteLine("Enter product price");
                 productDetails.price = int.Parse(Console.ReadLine());
+
                 Console.WriteLine("Enter category id");
                 productDetails.cid = int.Parse(Console.ReadLine());
+
+                //connection open
                 con.Open();
                 SqlCommand cmd = new SqlCommand("update product set pname='" + productDetails.pname + "' where pid=" + pid + "", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
+                //connection close
+
                 Console.WriteLine("product with id:" + pid + "\n" + "updated successfully");
             }
             catch (Exception)
@@ -142,7 +148,7 @@ namespace FashionProject
             return result;
         }
 
-        //searching a row with name 
+        //searching a row with product name 
         public bool Search(string name)
         {
             var ProList = new List<ProductDetails>();
