@@ -42,16 +42,18 @@ namespace FranchiseeConsoleApplication.PresentationLayer
                     sdr.Read();
                     Console.WriteLine( "Login successful");
                     con.Close();
+
                     Console.WriteLine("Enter ur choice");
                 Console.WriteLine("1:Add Franchisee");
                 Console.WriteLine("2:Display Franchisee details");
                 Console.WriteLine("3:Display Franchisee code wise");
                 Console.WriteLine("4:Display Date Franchisee details");
                 Console.WriteLine("5:Total Sales");
-                // Console.WriteLine("6:continue y/n");
                 Console.WriteLine("6:exit");
                 int choice = int.Parse(Console.ReadLine());
-                switch (choice)
+                  //  Console.WriteLine(@"Do you want to add more Employee? Y\N");
+                    
+                 switch (choice)
                 {
                     case 1:
                         Console.WriteLine("Enter following information to add new Franchisee:");
@@ -106,13 +108,21 @@ namespace FranchiseeConsoleApplication.PresentationLayer
                         break;
 
                 }
+                    //Console.WriteLine("\nAdd more toppings? Y/N");
+                    //char choice1 = Console.ReadKey().KeyChar;
+                    //switch (Char.ToUpper(choice1))
+                    //{
+                    //    case 'Y':
+                            
+                    //}
                 }
+                
                 else
                 {
                     Console.WriteLine("Login unsuccessful");
 
                 }
-                
+              
             }
             else
             {
@@ -180,10 +190,14 @@ namespace FranchiseeConsoleApplication.PresentationLayer
             try
             {
                 con.Open();
-              
-                sqlCommand = new SqlCommand("select  sales as Total_sales from franchisee where username='"+username1+"'  ", con);
+                sqlCommand = new SqlCommand("select  sum(sales) as Total_sale from franchisee where username='" + username1 + "'   ", con);
                 SqlDataReader sdr = sqlCommand.ExecuteReader();
-                
+                while (sdr.Read())
+                {
+                    Console.WriteLine("franchisee sales" + sdr.GetValue(0));
+
+                }
+               
                 con.Close();
             }
             catch (Exception)

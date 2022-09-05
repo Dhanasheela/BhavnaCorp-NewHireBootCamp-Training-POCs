@@ -84,9 +84,7 @@ namespace FranchiseeConsoleApplication.PresentationLayer
                             con.Close();
                             break;
                         case 2:
-                            //Console.WriteLine("Enter ur employee role");
-                           // string emp_role =DateTime.Now.ToString( Console.ReadLine());
-                            SalaryDistribution();
+                             SalaryDistribution();
                             break;
                         case 3:
                             Console.WriteLine("Enter ur Pizza  sales offline or online");
@@ -152,10 +150,13 @@ namespace FranchiseeConsoleApplication.PresentationLayer
 
                 //adding 2*sal salary for every employee based on emp_role 
                 sqlCommand = new SqlCommand("select sum(2*salary) as Total_salary from franch_employee " +
-                    "where emp_role='" + role + "' ", con);
-                 SqlDataReader sdr= sqlCommand.ExecuteReader();
-               
-                Console.WriteLine(Total_salary);
+                    "where emp_role='" + role + "'", con);
+                SqlDataReader sdr= sqlCommand.ExecuteReader();
+                while (sdr.Read())
+                {
+                    Console.WriteLine("Employees sum of sales:" + sdr.GetValue(0));
+
+                }
                 con.Close();
             }
             catch (Exception)
